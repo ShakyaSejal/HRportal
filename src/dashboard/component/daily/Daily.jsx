@@ -6,11 +6,12 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import { height } from "@fortawesome/free-solid-svg-icons/fa0";
 
 const Daily = () => {
   return (
     <>
-      <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-white-800 white:border-gray-700 w-full">
+      <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-white-800 white:border-gray-700 w-full " style={{height:"79%"}}>
       <Timeline position="alternate">
         <TimelineItem>
           <TimelineOppositeContent color="text.secondary">
@@ -80,24 +81,14 @@ const Daily = () => {
           <TimelineContent>09:30am </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent color="text.secondary">
-            New sale recorded <br /> <p className="text-blue-600">#ML-3467</p>
-          </TimelineOppositeContent>
+         
           <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
+           
           </TimelineSeparator>
-          <TimelineContent>09:30am </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent color="text.secondary">
-            New sale recorded <br /> <p className="text-blue-600">#ML-3467</p>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>09:30am </TimelineContent>
+          
+         
         </TimelineItem>
       </Timeline>
       </div>

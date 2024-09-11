@@ -4,25 +4,27 @@ import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 const Line = () => {
   const chartConfig = {
-    width: 500,
-    height: 300,
-    xAxis: [
-      {
-        data: [1, 2, 3, 5, 8, 10],
-        axisLine: true, // Show the x-axis line
-        axisBorder: true, // Ensure the border is shown
-        tickSize: 0, // Remove ticks to make the axis line cleaner
-        label: '', // Optionally remove the label if not needed
-      },
-    ],
-    yAxis: [
-      {
-        axisLine: true, // Show the y-axis line
-        axisBorder: true, // Ensure the border is shown
-        tickSize: 0, // Remove ticks for a cleaner look
-        label: '', // Optionally remove the label if not needed
-      },
-    ],
+    width: 300,
+    height: 200,
+  xAxis: [
+  {
+    data: [1, 2, 3, 5, 8, 10],
+    axisLine: false, // Hide the x-axis line
+    axisBorder: false, // Hide the x-axis border
+    tickSize: 0, // Remove ticks
+    label: '', // Optionally remove the label if not needed
+  },
+],
+yAxis: [
+  {
+    axisLine: false, // Hide the y-axis line
+    axisBorder: false, // Hide the y-axis border
+    tickSize: 0, // Remove ticks
+    label: '', // Optionally remove the label if not needed
+  },
+],
+
+   
     sx: {
       [`.${axisClasses.left}, .${axisClasses.bottom}`]: {
         border: 'none', // Remove the additional border around axes

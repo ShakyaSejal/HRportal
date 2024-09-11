@@ -9,10 +9,11 @@ import Line from "./component/graph/Line";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
+import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import Stats from "./component/stats/Stats";
 import Daily from "./component/daily/Daily";
 import Navbar from "../component/navbar/Navbar";
+import LastCard from "./component/card/lastCard";
 
 const Dashboard = () => {
   return (
@@ -20,16 +21,16 @@ const Dashboard = () => {
       <Navbar />
       {/* mainpagefull */}
       <div className=" bg-gray-100  ">
-        <div className=" ">
+        <div className=" mr-8 ml-8 ">
           {/* mathi top ko 2 ta wala */}
-          <div className="flex justify-between items-stretch ml-4 mr-4">
-            <div className="flex-1 m-4">
+          <div className="flex justify-between items-stretch ml-8 mr-8 h-full ">
+            <div className="flex-1 ">
               <p className="text-gray-400 text-xl mt-6 mr-6">
                 Welcome Johnathan
               </p>
               <p className="text-2xl">Ecommerce Dashboard</p>
             </div>
-            <div className="flex items-center space-x-4  mr-4">
+            <div className="flex items-center space-x-4  mr-8">
               <p className="text-gray-600 ">Date Dropdown</p>
               <Button icon={faPlus}>Read More</Button>
             </div>
@@ -54,8 +55,25 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="flex space-x-4 ">
-                <Card className="flex-1" />
-                <Card className="flex-1" />
+                <Card
+                  className="flex-1"
+                  title="Earnings"
+                  down="$93,438.78"
+                  color="white"
+                  icon={faDollarSign}
+                  bgColor="#4169E1"
+                  txtColor="white"
+                  iconColor="#87CEEB"
+                />
+                <Card
+                  className="flex-1"
+                  title="Monthly Sales"
+                  down="3246"
+                  txtColor="gray"
+                  color="black"
+                  icon={faDollarSign}
+                  iconColor="yellow"
+                />
               </div>
             </div>
             <div className="flex-1  bg-white border border-gray-200 rounded-lg shadow dark:bg-white-800 white:border-gray-700">
@@ -68,12 +86,12 @@ const Dashboard = () => {
             <Performance />
           </div>
 
-          <section className="flex space-x-3 ml-8 mr-8  ">
-            <div className=" mt-10 flex-1 flex mb-4">
-              <Card className="flex-1" />
+          <section className="flex space-x-3 ml-8 mr-8 " >
+            <div className=" mt-10 flex-1 flex mb-4 " style={{width:"300", height:"10"} }>
+              <LastCard />
             </div>
-            <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-white-800 white:border-gray-700 mt-10 flex-1 flex flex-col mb-4">
-              <div className="flex justify-between ml-4 p-4">
+            <div className=" bg-white border border-gray-200 rounded-lg shadow dark:bg-white-800 white:border-gray-700 mt-10 flex flex-col mb-4" style={{height:"77%"}}>
+              <div className="flex justify-between ml-4 p-2">
                 <div>
                   <h1> Weekly Stats</h1>
                   <h3> Average sales</h3>
@@ -82,33 +100,36 @@ const Dashboard = () => {
                   <FontAwesomeIcon icon={faEllipsis} />
                 </div>
               </div>
+             <div >
+             <div className=" m-0">
+                <div >
+                  <Stats
+                    title={"Top Sales"}
+                    name={"Johnathan Doe"}
+                    icon={faCartShopping}
+                    per={"+68% "}
+                  />
+                </div>
+                <div className="m-1">
+                  <Stats
+                    title={"Best Seller"}
+                    name={"MaterialPro Admin"}
+                    icon={faCartShopping}
+                    per={"+68% "}
+                  />
+                </div>
+                <div>
+                  <Stats
+                    title={"Most Commented"}
+                    name={"Ample Admin"}
+                    icon={faCartShopping}
+                    per={"+68% "}
+                  />
+                </div>
+              </div>
+             </div>
 
-              <div className="flex-1 px-4 space-y-4">
-                <Stats
-                  title={"Top Sales"}
-                  name={"Johnathan Doe"}
-                  icon={faCartShopping}
-                  per={"+68% "}
-                />
-              </div>
-              <div>
-                <Stats
-                  title={"Best Seller"}
-                  name={"MaterialPro Admin"}
-                  icon={faCartShopping}
-                  per={"+68% "}
-                />
-              </div>
-              <div>
-                <Stats
-                  title={"Most Commented"}
-                  name={"Ample Admin"}
-                  icon={faCartShopping}
-                  per={"+68% "}
-                />
-              </div>
-
-              <div className="p-4">
+              <div className="">
                 <Line />
               </div>
             </div>
