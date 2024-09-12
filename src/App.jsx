@@ -11,6 +11,7 @@ import Dashboard from './dashboard/Dashboard'
 import Stats from './dashboard/component/stats/Stats'
 import Daily from './dashboard/component/daily/Daily'
 import Navbar from './component/navbar/Navbar'
+import DropDowm from './dashboard/component/DropDowm'
 
 function App() {
 
@@ -26,6 +27,8 @@ function App() {
         <Route path='/stats' element={<Stats/>}/>
         <Route path='/daily' element={<Daily/>}/>
         <Route path='/nav' element={<Navbar/>}/>
+        <Route path='/dropdown' element={<DropDowm/>}/>
+
 
 
 

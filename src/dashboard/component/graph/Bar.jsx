@@ -80,6 +80,7 @@ const SalesOverview = () => {
   return (
     <div className="ml-4 mr-8">
       <BarChart
+        borderRadius={13}
         dataset={dataset}
         xAxis={[{ scaleType: "band", dataKey: "month" }]}
         series={[

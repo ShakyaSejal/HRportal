@@ -14,13 +14,14 @@ import Stats from "./component/stats/Stats";
 import Daily from "./component/daily/Daily";
 import Navbar from "../component/navbar/Navbar";
 import LastCard from "./component/card/lastCard";
+import Dropdown from "./component/DropDowm";
 
 const Dashboard = () => {
   return (
     <>
       <Navbar />
       {/* mainpagefull */}
-      <div className=" bg-gray-100  ">
+      <div className=" bg-gray-100  " style={{height:"95%"}}>
         <div className=" mr-8 ml-8 ">
           {/* mathi top ko 2 ta wala */}
           <div className="flex justify-between items-stretch ml-8 mr-8 h-full ">
@@ -28,11 +29,11 @@ const Dashboard = () => {
               <p className="text-gray-400 text-xl mt-6 mr-6">
                 Welcome Johnathan
               </p>
-              <p className="text-2xl">Ecommerce Dashboard</p>
+              <p className="text-2xl font-extrabold">Analytical Dashboard</p>
             </div>
-            <div className="flex items-center space-x-4  mr-8">
-              <p className="text-gray-600 ">Date Dropdown</p>
-              <Button icon={faPlus}>Read More</Button>
+            <div className="flex items-center  mr-2 mt-8">
+              <Dropdown/>
+              <Button icon={faPlus} >Add New</Button>
             </div>
           </div>
           {/* mathi ko wala sakko */}
@@ -45,11 +46,11 @@ const Dashboard = () => {
                   alt="Earnings background"
                   className="absolute inset-0 h-full w-full object-cover "
                 />
-                <div className="  h-full flex flex-col  bg-white bg-opacity-50 p-4 ">
-                  <p className="ml-4 text-lg ">
+                <div className="  h-full flex flex-col  bg-white bg-opacity-50  ">
+                  <p className="ml-4 text-lg p-4">
                     Hey John, <br /> Download the latest report
                   </p>
-                  <div className=" w-32 mt-6 ml-4">
+                  <div className=" w-24 mt-6 ml-0">
                     <Button>Download</Button>
                   </div>
                 </div>
@@ -139,10 +140,11 @@ const Dashboard = () => {
             </div>
           </section>
         </div>
-      </div>
-      <footer class="bg-white text-center py-4">
+    <footer class="bg-white text-center py-4">
         <p class="text-gray-500">2024© All Rights Reserved by Wrappixel</p>
-      </footer>
+      </footer>  
+       </div>
+     
     </>
   );
 };
