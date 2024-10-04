@@ -22,5 +22,5 @@ const Card = ({ title, icon, bgColor,iconColor, txtColor ,down ,color}) => {
     </>
   );
 };
-
 export default Card;
+
